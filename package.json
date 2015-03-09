@@ -1,0 +1,40 @@
+{
+  "name": "React-Hello-Word",
+  "version": "0.0.1",
+  "description": "Form Control Factory in a React Application",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "watchify -o js/bundle.js -v -d .",
+    "build": "browserify . | uglifyjs -cm > js/bundle.min.js",
+    "test": "jest",
+    "test-debug": "node-debug --nodejs --harmony node_modules/jest-cli/bin/jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/astrobolidos/React-Form-Factory.git"
+  },
+  "author": "Lisandro Pacheco",
+  "homepage": "https://github.com/astrobolidos/React-Form-Factory",
+  "dependencies": {
+    "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "jest-cli": "^0.4.0",
+    "react": "^0.12.2",
+    "react-tools": "^0.12.2",
+    "reactify": "^1.0.0",
+    "uglify": "^0.1.1",
+    "watchify": "^2.4.0"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "jest": {
+    "testDirectoryName": "__tests__/src",
+    "scriptPreprocessor": "__tests__/preprocessor.js",
+    "unmockedModulePathPatterns": ["node_modules/react"] 
+  }
+}
