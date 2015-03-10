@@ -3,7 +3,9 @@ var React = require('react/addons');
 var CtrlInput = React.createClass({
 	render: function() {
 		return (
-			<input type="text" value="hello"/>
+			<p>
+				<input type="text" value="hello"/>
+			</p>
 		);
 	}
 });

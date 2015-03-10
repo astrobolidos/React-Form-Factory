@@ -1,12 +1,16 @@
 var React = require('react/addons');
 var CtrlInput = require('./ctrlInput.react');
+var CtrlSelect = require('./ctrlSelect.react');
 
 var ControlFactory = React.createClass({
 	render: function() {
 		var control;
 		switch (this.props.control.type) {
 			case 'input': 
-				control = <CtrlInput control={this.props.control} />
+				control = <CtrlInput control={this.props.control} /> 
+				break;
+			case 'select': 
+				control = <CtrlSelect control={this.props.control} />
 				break;
 			default: 
 				control = <p>Control {this.props.control.title} could not be rendered!
@@ -14,9 +18,7 @@ var ControlFactory = React.createClass({
 				break;
 		}
 
-		return (
-			<li>{control}</li> 
-		)
+		return ( <li>{control}</li>);
 	}
 });
 
