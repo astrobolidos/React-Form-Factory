@@ -21,8 +21,9 @@ var ControlFactory = React.createClass({
 				control = <CtrlSelect control={this.props.control} />
 				break;
 			default: 
-				control = <p>Control {this.props.control.title} could not be rendered!
-				invalid type: {this.props.control.type}</p>
+				control = <p>
+					<h5>{this.props.control.title}</h5> 
+					This control could not be rendered! Invalid type: {this.props.control.type}</p>
 				break;
 		}
 

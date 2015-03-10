@@ -11,7 +11,10 @@ var CtrlSelect = React.createClass({
 		];
 
 		return (
-			<DropDownMenu menuItems={menuItems} selectedIndex="2" />
+			<p>
+				<h5>{this.props.control.title}</h5>
+				<DropDownMenu menuItems={menuItems} selectedIndex="2" />
+			</p>
 		);
 	}
 });
