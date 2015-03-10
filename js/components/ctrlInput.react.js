@@ -4,7 +4,7 @@ var CtrlInput = React.createClass({
 	render: function() {
 		return (
 			<p>
-				<input type="text" value="hello"/>
+				<input type={this.props.control.type} value="hello"/>
 			</p>
 		);
 	}
