@@ -2,17 +2,20 @@ var React = require('react/addons');
 var CtrlInput = require('./ctrlInput.react');
 var CtrlSelect = require('./ctrlSelect.react');
 var CtrlRadio = require('./ctrlRadio.react');
+var CtrlCheckbox = require('./ctrlCheckbox.react');
 
 var ControlFactory = React.createClass({
 	render: function() {
 		var control;
 		switch (this.props.control.type) {
 			case 'input': 
-			case 'checkbox':
 				control = <CtrlInput control={this.props.control} /> 
 				break;
 			case 'radio':	
 				control = <CtrlRadio control={this.props.control} />
+				break;
+			case 'checkbox':
+				control = <CtrlCheckbox control={this.props.control} />
 				break;
 			case 'select': 
 				control = <CtrlSelect control={this.props.control} />
@@ -23,7 +26,7 @@ var ControlFactory = React.createClass({
 				break;
 		}
 
-		return ( <li>{control}</li>);
+		return (<li>{control}</li>);
 	}
 });
 
