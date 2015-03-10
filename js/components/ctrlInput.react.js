@@ -1,11 +1,11 @@
 var React = require('react/addons');
+var MUI = require('material-ui');
+var TextField = MUI.TextField;
 
 var CtrlInput = React.createClass({
 	render: function() {
 		return (
-			<p>
-				<input type={this.props.control.type} value="hello"/>
-			</p>
+			<TextField hintText='Enter value here!' />
 		);
 	}
 });

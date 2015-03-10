@@ -1,4 +1,6 @@
 var React = require('react/addons');
+var MUI = require('material-ui');
+var Paper = MUI.Paper;
 var ControlFactory = require('./controlFactory.react');
 
 var QuestionList = React.createClass({
@@ -10,15 +12,15 @@ var QuestionList = React.createClass({
 	},
 	render: function() {
 		return (
-			<div className="question-list"> 
-				<h1>Welcome to Question List Component</h1>
-				<h2>To show a component store working!</h2>
+			<Paper className="question-list" zDepth={1}>
+				<h3>Welcome to Question List Component</h3>
+				<h4>To show a working component factory!</h4>
 				<ul>
 					{ this.state.questions.map(function(question) {
 						return <ControlFactory key={question.id} control={question} />;
 					})}
 				</ul>
-			</div>
+			</Paper>
 		);
 	}
 });

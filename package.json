@@ -16,7 +16,9 @@
   "author": "Lisandro Pacheco",
   "homepage": "https://github.com/astrobolidos/React-Form-Factory",
   "dependencies": {
-    "react": "^0.12.2"
+    "material-ui": "^0.7.1",
+    "react": "^0.12.2",
+    "react-tap-event-plugin": "^0.1.4"
   },
   "devDependencies": {
     "browserify": "^9.0.3",
@@ -35,6 +37,8 @@
   "jest": {
     "testDirectoryName": "__tests__/src",
     "scriptPreprocessor": "__tests__/preprocessor.js",
-    "unmockedModulePathPatterns": ["node_modules/react"] 
+    "unmockedModulePathPatterns": [
+      "node_modules/react"
+    ]
   }
 }
