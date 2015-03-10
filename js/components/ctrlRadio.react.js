@@ -1,14 +1,16 @@
 var React = require('react/addons');
+var MUI = require('material-ui');
+var RadioButtonGroup = MUI.RadioButtonGroup;
+var RadioButton = MUI.RadioButton;
 
 var CtrlRadio = React.createClass({
 	render: function() {
 		return (
-			<p>
-				<label>{this.props.control.title}</label>
-				<input type="radio" name="rdo" value="option 1"/> Value One
-				<input type="radio" name="rdo" value="option 2" checked/> Value One
-				<input type="radio" name="rdo" value="option 3"/> Value One
-			</p> 
+			<RadioButtonGroup name="shipSpeed" defaultSelected="not_light">
+				<RadioButton value="light"	label="prepare for light speed" />
+				<RadioButton value="not_light" label="light speed too slow" defaultChecked={true} />
+				<RadioButton value="ludicrous" label="go to ludicous speed" disabled={true}/>
+			</RadioButtonGroup> 
 		);
 	}
 });

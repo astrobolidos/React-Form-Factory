@@ -5,7 +5,10 @@ var TextField = MUI.TextField;
 var CtrlInput = React.createClass({
 	render: function() {
 		return (
-			<TextField hintText='Enter value here!' />
+			<p>
+				<h6>{this.props.control.title}</h6>
+				<TextField hintText='Enter value here!' />
+			</p>
 		);
 	}
 });
