@@ -1,15 +1,17 @@
 var React = require('react/addons');
+var MUI = require('material-ui');
+var DropDownMenu = MUI.DropDownMenu;
 
 var CtrlSelect = React.createClass({
 	render: function() {
+		var menuItems = [
+			{ payload: '1', text: 'value1' },
+			{ payload: '2', text: 'value2' },
+			{ payload: '3', text: 'value3' },
+		];
+
 		return (
-			<p>
-				<select name="select" defaultValue="value2">
-					<option value="value1">Value 1</option> 
-					<option value="value2">Value 2</option>
-					<option value="value3">Value 3</option>
-				</select> 
-			</p>
+			<DropDownMenu menuItems={menuItems} selectedIndex="2" />
 		);
 	}
 });
