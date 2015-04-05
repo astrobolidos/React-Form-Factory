@@ -9,6 +9,12 @@
     "test": "jest",
     "test-debug": "node-debug --nodejs --harmony node_modules/jest-cli/bin/jest --runInBand"
   },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "lessify"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/astrobolidos/React-Form-Factory.git"
@@ -16,23 +22,19 @@
   "author": "Lisandro Pacheco",
   "homepage": "https://github.com/astrobolidos/React-Form-Factory",
   "dependencies": {
-    "material-ui": "^0.7.1",
+    "material-ui": "^0.7.3",
     "react": "^0.12.2",
     "react-tap-event-plugin": "^0.1.4"
   },
   "devDependencies": {
     "browserify": "^9.0.3",
     "jest-cli": "^0.4.0",
+    "lessify": "^1.0.1",
     "react": "^0.12.2",
     "react-tools": "^0.12.2",
     "reactify": "^1.0.0",
     "uglify": "^0.1.1",
     "watchify": "^2.4.0"
-  },
-  "browserify": {
-    "transform": [
-      "reactify"
-    ]
   },
   "jest": {
     "testDirectoryName": "__tests__/src",

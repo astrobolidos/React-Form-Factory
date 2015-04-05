@@ -31,6 +31,7 @@ var QuestionData = [
 	{ id: 3, title: 'Quesiton Three', type: 'slide', value:'48' },
 	{ id: 4, title: 'Question Four', type: 'checkbox', value:'checked' },
 	{ id: 5, title: 'Question Five', type: 'select', value:'2' },
+	{ id: 6, title: 'Question Six', type: 'calendar', value:'22/04/1978' },
 ];
 
 module.exports = QuestionList;

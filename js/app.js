@@ -1,3 +1,4 @@
+require('../css/styles.less');
 window.React = require('react/addons');
 
 var React = require('react/addons');
