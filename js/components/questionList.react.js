@@ -20,6 +20,7 @@ var QuestionList = React.createClass({
 						return <ControlFactory key={question.id} control={question} />;
 					})}
 				</ul>
+				<div className="clearer" />
 			</Paper>
 		);
 	}
